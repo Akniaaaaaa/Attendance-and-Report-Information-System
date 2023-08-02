@@ -33,7 +33,7 @@
           <div class="card card-tale">
             <div class="card-body">
               <a href="/admin/kategori">
-                <p class="btn btn-light bg-white btn-sm mb-4">KIDS</p>
+                <p class="btn btn-light bg-white btn-sm mb-4">Data Kategori</p>
               </a>
               <p class="fs-30 mb-2">{{$kids}}</p>
               <p></p>
@@ -44,9 +44,9 @@
           <div class="card card-dark-blue">
             <div class="card-body">
               <a href="/admin/soal">
-                <p class="btn btn-light bg-white btn-sm mb-4">SUBJECT</p>
+                <p class="btn btn-light bg-white btn-sm mb-4">Data Soal</p>
               </a>
-              <p class="fs-30 mb-2">{{$subject}}</p>
+              <p class="fs-30 mb-2">{{$kids}}</p>
               <p></p>
             </div>
           </div>
@@ -56,10 +56,10 @@
         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
           <div class="card card-light-blue">
             <div class="card-body">
-              <a href="{{route('tutor')}}">
-                <p class="btn btn-light bg-white btn-sm mb-4">TUTOR</p>
+              <a href="/admin/jadwal">
+                <p class="btn btn-light bg-white btn-sm mb-4">Data Jadwal</p>
               </a>
-              <p class="fs-30 mb-2">{{$tutor}}</p>
+              <p class="fs-30 mb-2">{{$kids}}</p>
               <p></p>
             </div>
           </div>
@@ -68,9 +68,9 @@
           <div class="card card-light-danger">
             <div class="card-body">
               <a href="/admin/pengguna">
-                <p class="btn btn-light bg-white btn-sm mb-4">LEVEL</p>
+                <p class="btn btn-light bg-white btn-sm mb-4">Data Pengguna</p>
               </a>
-              <p class="fs-30 mb-2">{{$level}}</p>
+              <p class="fs-30 mb-2">{{$kids}}</p>
               <p></p>
             </div>
           </div>

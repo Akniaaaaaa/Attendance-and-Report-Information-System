@@ -27,7 +27,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-              <center>  <img style="width:100px; height:100px;" src="{{asset('admin/images/logo_ASJ-piala.png')}}" alt="logo"> </center>
+                <center> <img style="width:150px; height:150px;" src="{{asset('admin/images/logoo.png')}}" alt="logo"> </center>
               </div>
               @if(session()->has('success'))
               <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -35,25 +35,33 @@
               </div>
               @endif
               <center>
-              <h4>Hello! Selamat Datang</h4>
-              <h6 class="font-weight-light">Silahkan Login</h6>
+                <h4>Hello! Welcome</h4>
+                <h6 class="font-weight-light">Log In Now!!!</h6>
               </center>
               <form class="pt-3" action="{{ route('login') }}" method="post">
-              @csrf
+                @csrf
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                  @error('email')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
+                  <input type="text" class="form-control form-control-lg @error('nik') is-invalid @enderror" name="nik" id="nik" placeholder="NIK" value="{{ old('nik') }}" required autocomplete="nik" autofocus>
+                  @error('nik')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
                   @enderror
                 </div>
+                <!-- <div class="form-group">
+                  <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                  @error('email')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
+                </div> -->
                 <div class="form-group">
                   <input type="password" class="form-control form-control-lg @error('email') is-invalid @enderror" name="password" id="password" placeholder="Password" required autocomplete="current-password">
                   @error('password')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
                   @enderror
                 </div>
                 <div class="mt-3">
@@ -63,12 +71,12 @@
                   <div class="form-check">
                     <label for="remember" class="form-check-label text-muted">
                       <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                      Ingat Saya
+                      Remember Me
                     </label>
                   </div>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Belum Punya Akun? <a href="/register" class="text-primary">Daftar</a>
+                  Don't have an account? <a href="/register" class="text-primary">Register</a>
                 </div>
               </form>
             </div>

@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Aku Sang Juara</title>
+    <title>Simulasi CAT</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ url('admin/vendors/feather/feather.css')}}">
     <link rel="stylesheet" href="{{ url('admin/vendors/ti-icons/css/themify-icons.css')}}">
@@ -20,7 +20,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ url('admin/css/vertical-layout-light/style.css')}}">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ url('admin/images/logo_ASJ-lengkap.png')}}" />
+    <link rel="shortcut icon" href="{{ url('admin/images/3632.jpg')}}" />
     <!--bootstrap-->
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -40,7 +40,7 @@
          <!-- partial:partials/_navbar.html -->
   <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-      <a class="navbar-brand brand-logo ml-2" ><img src="{{asset('admin/images/logo_ASJ-piala.png')}}" class="mr-2" alt="logo"/><label style="font-size: 16pt">AKU SANG JUARA</label></a>
+      <a class="navbar-brand brand-logo ml-2" ><img src="{{asset('admin/images/3632.jpg')}}" class="mr-2" alt="logo"/><label style="font-size: 16pt">Simulasi CAT</label></a>
       <a class="navbar-brand brand-logo-mini ml-4"><img src="{{asset('admin/images/logo_ASJ-lengkap.png')}}" alt="logo"/></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">

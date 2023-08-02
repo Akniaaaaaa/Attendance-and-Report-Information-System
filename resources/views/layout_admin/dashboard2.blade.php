@@ -95,13 +95,12 @@
               <span class="menu-title">Kids</span>
             </a>
           </li>
-          @if(auth()->user()->id == 2)
-          <li class="nav-item">
+
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{route('subject')}}">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Subject</span>
-            </a>
-            @endif
+            </a> -->
 
           </li>
           <li class="nav-item">

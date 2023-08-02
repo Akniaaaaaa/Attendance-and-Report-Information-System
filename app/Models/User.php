@@ -25,7 +25,9 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
-        'pic'
+        'pic',
+        'nik',
+        'subject',
     ];
 
     /**
@@ -64,5 +66,13 @@ class User extends Authenticatable
     public function waktu()
     {
         return $this->hasMany(User::class, 'id', 'id');
+    }
+    public function rapor()
+    {
+        return $this->hasMany(Rapor::class);
+    }
+    public function isAdmin()
+    {
+        return $this->role === '2';
     }
 }

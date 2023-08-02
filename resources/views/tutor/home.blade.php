@@ -1,4 +1,4 @@
-@extends('layout_admin/dashboard')
+@extends('layout_admin/dashboard2')
 @section('badan')
 <div class="content-wrapper">
   <div class="row">

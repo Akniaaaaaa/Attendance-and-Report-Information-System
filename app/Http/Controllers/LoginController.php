@@ -14,16 +14,17 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        $credentials = $request->validate([ 
-            'email' => 'required|email:dns',
+        $credentials = $request->validate([
+            // 'email' => 'required|email:dns',
+            'nik' => 'required',
             'password' => 'required'
         ]);
 
         if (Auth::attempt($credentials)) {
             if (auth()->user()->role == 1) {
-                return redirect('/dashboard');
+                return redirect()->route('homee');
             } elseif (auth()->user()->role == 2) {
-                return redirect('/home');
+                return redirect()->route('home');
             }
         }
 

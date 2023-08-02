@@ -6,19 +6,36 @@ use App\Models\User;
 use App\Models\Soal;
 use App\Models\Kategori;
 use App\Models\Jadwal;
+use App\Models\Kids;
+use App\Models\Subject;
 use Illuminate\Http\Request;
+use PHPUnit\Framework\Constraint\Count;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $kategori = Kategori::all()->count('id_kategori');
-        $soal = Soal::all()->count('id_soal');
-        $jadwal = Jadwal::all()->count('id_jadwal');
-        $pengguna = User::all()->count('id');
 
+        $kids = Kids::all()->count('id');
+        $subject = Count(Subject::all());
+        $tutor = Count(User::where('id', 1)->get());
+        $level = Count(Kids::groupBy('level')
+            ->get());
+        // dd($level);
         $peserta = User::where('id', auth()->user()->id)->first();
-        return view('admin/home', compact('peserta', 'kategori', 'soal', 'jadwal', 'pengguna'));
+        return view('admin/home', compact('peserta', 'kids', 'subject', 'tutor', 'level'));
+    }
+    public function index2()
+    {
+
+        $kids = Kids::all()->count('id');
+        $subject = Count(Subject::all());
+        $tutor = Count(User::where('id', 1)->get());
+        $level = Count(Kids::groupBy('level')
+            ->get());
+        // dd($level);
+        $peserta = User::where('id', auth()->user()->id)->first();
+        return view('tutor/home', compact('peserta', 'kids', 'subject', 'tutor', 'level'));
     }
 
     public function profile()
@@ -26,5 +43,4 @@ class HomeController extends Controller
         $user = User::where('id', auth()->user()->id)->first();
         return view('peserta/profile', compact('user'));
     }
-
 }

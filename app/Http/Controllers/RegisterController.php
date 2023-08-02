@@ -21,10 +21,12 @@ class RegisterController extends Controller
             'email' => 'required|email:dns|unique:users',
             'password' => 'required|min:8|max:255',
             'role' => 'required',
-            'pic'=>'required|image'
+            'nik' => 'required',
+            'subject' => 'required',
+            'pic' => 'required|image'
         ]);
 
-        if($request->file('pic')){
+        if ($request->file('pic')) {
             $validatedData['pic'] = $request->file('pic')->store('avatars');
         }
 
